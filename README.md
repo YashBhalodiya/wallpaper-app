@@ -1,4 +1,7 @@
-<img src="assets/images/Home.png" width=300 height=650 />
+<div style="display: flex; padding: 20;">
+  <img src="assets/images/WelcomeScreen.png" width="300" height="650" />
+  <img src="assets/images/HomeScreen.png" width="300" height="650" />
+</div>
 
 # Welcome to your Expo app 👋
 
