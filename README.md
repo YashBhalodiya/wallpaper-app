@@ -1,6 +1,8 @@
 <div style="display: flex; padding: 20;">
   <img src="assets/images/WelcomeScreen.png" width="300" height="650" />
-  <img src="assets/images/HomeScreen.png" width="300" height="650" />
+  <img src="assets/images/WallpaperApp1.png" width="300" height="650" />
+  <img src="assets/images/WallpaperApp2.png" width="300" height="650" />
+  <img src="assets/images/WallpaperApp3.png" width="300" height="650" />
 </div>
 
 # Welcome to your Expo app 👋
