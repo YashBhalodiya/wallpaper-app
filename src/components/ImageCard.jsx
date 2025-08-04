@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import { Dimensions, Image, Pressable, StyleSheet } from 'react-native';
 
 const { width } = Dimensions.get('window');
-const cardWidth = (width - 32) / 2; // 2 columns with 16px padding on each side
+const cardWidth = (width - 32) / 2;
 
 const ImageCard = memo(({ item, index, onPress }) => {
   const imageHeight = item.webformatHeight 
