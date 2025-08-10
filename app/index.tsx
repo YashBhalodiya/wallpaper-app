@@ -11,6 +11,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { data } from "../constants/data";
 import CategoryList from "../src/components/CategoryList";
 import ImageGrid from "../src/components/ImageGrid";
+import ImagePreviewModal from "../src/components/ImagePreviewModal";
 import SearchBar from "../src/components/SearchBar";
 import { useImages } from "../src/hooks/useImages";
 
@@ -32,6 +33,8 @@ export default function index() {
 
   const [selectedCategory, setSelectedCategory] = React.useState(null);
   const [currentSearch, setCurrentSearch] = React.useState('');
+  const [modalVisible, setModalVisible] = React.useState(false);
+  const [selectedImage, setSelectedImage] = React.useState(null);
 
   // Load initial images on mount
   useEffect(() => {
@@ -92,6 +95,8 @@ export default function index() {
   const handleImagePress = useCallback((item, index) => {
     // TODO: Navigate to image detail screen
     console.log('Image pressed:', item.id);
+    setSelectedImage(item);
+    setModalVisible(true);
   }, []);
 
   return (
@@ -131,6 +136,14 @@ export default function index() {
         onRefresh={handleRefresh}
         onImagePress={handleImagePress}
       />
+
+      <ImagePreviewModal
+      visible={modalVisible}
+      image={selectedImage}
+      onClose={()=>{
+        setModalVisible(false);
+        setSelectedImage(null);
+      }} />
     </SafeAreaView>
   );
 }
