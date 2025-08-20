@@ -1,10 +1,10 @@
 import React, { memo, useCallback } from 'react';
 import {
-    FlatList,
-    Pressable,
-    StyleSheet,
-    Text,
-    View,
+  FlatList,
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
 } from 'react-native';
 
 const CategoryItem = memo(({ title, selected, onPress }) => {
